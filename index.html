@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body class="no-mathjax">
 <!--Header-->
 <div class="row justify-content-center no-gutters">
   <!--changing id attribute to calss attribute-->
@@ -58,7 +58,7 @@
         </div>
       </div>
       <h1 class="heading-wrapper text-center">Notes on the Negative binomial distribution</h1>
-      <p class="article first-paragraph text-left">
+      <p class="article first-paragraph text-left mathjax">
         A generalization of a geometric distribution. Negative binomial distribution describes the number of successes
         in a sequence of independent experiments performed until the
         \(r−\)th failure. Formally, let
@@ -71,14 +71,14 @@
       <div class="example-container container col">
         <div class="example-wrapper row justify-content-center no-gutters">
           <!--example math code-->
-          <p class="example">
+          <p class="example mathjax">
             \[
             X=S_\tau, \tau=\min\{n\geq 1:S_n=n-r\}
             \]
           </p>
         </div>
       </div>
-      <p class="article text-left">
+      <p class="article text-left mathjax">
         (here \(\tau\) is the number of the last experiment, when \(r\)th failure occured).Parameters:
         \(r\) number of failures after which we stop performing experiments,
         \(p\) – probability of a success in a single experiment.
@@ -90,7 +90,7 @@
       </p>
       <div class="container example-container col">
         <div class="example-wrapper  row justify-content-center no-gutters">
-          <p class="example">
+          <p class="example mathjax">
             \[
             P(X=k)={k+r-1\choose k}p^{k}(1-p)^r, \ k\geq 0.
             \]
@@ -98,7 +98,7 @@
         </div>
       </div>
       <h1 class="text-center" style="padding: 7px; font-size: 3.5em;">Derivation</h1>
-      <p class="article text-left">
+      <p class="article text-left mathjax">
         The event
         \(X=k\) means that when the
         \(r-\)th failure occurd there were exactly
@@ -107,7 +107,7 @@
       </p>
       <div class="container example-container col">
         <div class="example-wrapper row justify-content-center no-gutters">
-          <p class="example">
+          <p class="example mathjax">
             \[
             P(X=k)=P(\tau=k+r, S_{k+r}=k)=
             \]
@@ -117,7 +117,7 @@
       <p class="article text-left">The last experiment is a failure:</p>
       <div class="container example-container col">
         <div class="example-wrapper row justify-content-center no-gutters">
-          <p class="example">
+          <p class="example mathjax">
             \[
             =P(\xi_{k+r}=0, S_{k+r-1}=k)=
             \]
@@ -127,7 +127,7 @@
       <p class="article text-left">By independence:</p>
       <div class="container example-container col">
         <div class="example-wrapper row justify-content-center no-gutters">
-          <p class="example">
+          <p class="example mathjax">
             \[=(1-p)P(S_{k+r-1}=k)=\]
           </p>
         </div>
@@ -135,7 +135,7 @@
       <p class="article text-left">The sum has a binomial distribution:</p>
       <div class="container example-container col">
         <div class="example-wrapper row justify-content-center no-gutters">
-          <p class="example">
+          <p class="example mathjax">
             \[
             =(1-p){k+r-1\choose k}p^{k}(1-p)^(r-1)={k+r-1\choose k}p^{k}(1-p)^r.
             \]
@@ -145,7 +145,7 @@
       <p class="article text-left">Moment generating function: </p>
       <div class="container example-container col">
         <div class="example-wrapper row justify-content-center no-gutters">
-          <p class="example">
+          <p class="example mathjax">
             \[
             M(t)=\frac{(1-p)^r}{(1-pe^t)^r}, \ t&lt;
             \ln\frac{1}{p}
@@ -154,7 +154,7 @@
         </div>
       </div>
       <h1 class="text-center" style="padding: 7px; font-size: 3.5em;">Proof</h1>
-      <p class="article text-left">
+      <p class="article text-left mathjax">
         \(
         M(t)=Ee^{tX}=
         \)
@@ -163,36 +163,36 @@
       </p>
       <div class="container example-container col">
         <div class="example-wrapper row justify-content-center no-gutters">
-          <p class="example">\[
+          <p class="example mathjax">\[
             =\sum^\infty_{k=0} e^{tk}{k+r-1\choose k}p^{k}(1-p)^r=(1-p)^r\sum^\infty_{k=0} {k+r-1\choose k}(pe^t)^{k}=
             \]</p>
         </div>
       </div>
-      <p class="article text-left">The sum is a Taylor expansion of
+      <p class="article text-left mathjax">The sum is a Taylor expansion of
         \(\frac{1}{(1-x)^r}\) around
         \(0,\) evaluated at
         \(x=pe^t\) (condition on
         \(t\) ensures convergence)</p>
       <div class="container example-container col">
         <div class="example-wrapper row justify-content-center no-gutters">
-          <p class="example">
+          <p class="example mathjax">
             \[
             =\frac{(1-p)^r}{(1-pe^t)^r}
             \]
           </p>
         </div>
       </div>
-      <p class="article text-left">Expectation:
+      <p class="article text-left mathjax">Expectation:
         \(EX=\frac{pr}{1-p}\)</p>
 
-      <p class="article text-left">Variance:
+      <p class="article text-left mathjax">Variance:
         \(V(X)=\frac{pr}{(1-p)^2}\)</p>
       <h1 class="text-center" style="padding: 7px; font-size: 3.5em;">Derivation</h1>
-      <p class="article text-left">Expectation is the first derivative
+      <p class="article text-left mathjax">Expectation is the first derivative
         \(M&#39;(0).\) We have</p>
       <div class="container example-container col">
         <div class="example-wrapper row justify-content-center no-gutters">
-          <p class="example">
+          <p class="example mathjax">
             \[
             M&#39;(t)=r\frac{p(1-p)^re^t}{(1-pe^t)^{r+1}}
             \]
@@ -202,10 +202,10 @@
           </p>
         </div>
       </div>
-      <p class="article text-left">Second moment is the second derivative \(M&#39;&#39;(0).\). We have: </p>
+      <p class="article text-left mathjax">Second moment is the second derivative \(M&#39;&#39;(0).\). We have: </p>
       <div class="container example-container col">
         <div class="example-wrapper row justify-content-center no-gutters">
-          <p class="example">
+          <p class="example mathjax">
             \[M&#39;&#39;(t)=r\frac{p(1-p)^re^t}{(1-pe^t)^{r+1}}+r(r+1)\frac{p^2(1-p)^re^{2t}}{(1-pe^t)^{r+2}}\]
             \[EX^2=\frac{pr}{1-p}+\frac{r(r+1)p^2}{(1-p)^2}\]
           </p>
@@ -214,7 +214,7 @@
       <p class="article text-left">Variance is</p>
       <div class="container example-container col">
         <div class="example-wrapper row justify-content-center no-gutters">
-          <p class="example">
+          <p class="example mathjax">
             \[V(X)=\frac{pr}{1-p}+\frac{rp^2}{(1-p)^2}=\frac{pr}{(1-p)^2}\]
           </p>
         </div>
@@ -248,9 +248,12 @@
 <!--mathjax configuration-->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    tex2jax: {
+      inlineMath: [['$','$'],['\\(','\\)']],
+      processClass: "mathjax",
+      ignoreClass: "no-mathjax"
+    }
   });
-
 </script>
 <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
