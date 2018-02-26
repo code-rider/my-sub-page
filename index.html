@@ -1,188 +1,259 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arman Anwar -- Lost in Space</title>
-
-      <meta charset="utf-8">
-
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-      <meta name="generator" content="pandoc">
-
-      <script src="/static/jquery-1.11.3/jquery.min.js"></script>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-
-      <link href="/static/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
-      <script src="/static/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-      <script src="/static/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-      <script src="/static/bootstrap-3.3.5/shim/respond.min.js"></script>
-      <script src="/static/navigation-1.1/tabsets.js"></script>
-      <link href="/static/highlightjs-9.12.0/default.css" rel="stylesheet">
-
-      <script src="/static/highlightjs-9.12.0/highlight.js"></script>
-      <style type="text/css">code{white-space: pre;}</style>
-
-      <style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-
-      <script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-      <style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
-    <link rel="shortcut icon" href="/static/images/728358_writing_512x512.png">
-    <link rel="stylesheet" href="/static/css/bootstrap.css">
-    <link rel="stylesheet" href="/static/css/styles.css" media="all">
-  </head>
-  <body>
-    <div class="row justify-content-center no-gutters">
-      <header id="header col">
-        <div class="container header-container">
-          <div class="row justify-content-between align-items-center no-gutters header-row">
-            <div class="header-titles"><a href="/content/pages/about">About</a></div>
-            <div class="header-titles"><a href="https://github.com/armaninspace">GitHub</a></div>
-            <div class="header-titles"><a href="https://www.linkedin.com/in/arman-anwar-a107961/">LikedIn</a></div>
-            <a href="/"><img src="/static/images/A-logo.svg" class="A-logo"></a>
-            <div class="header-titles push-1"><a href="/content/pages/blogs">Random</a></div>
-            <div class="header-titles"><a href="https://twitter.com/armaninspace">Twitter</a></div>
-
-            <div class="dropdown">
-              <div class="dots dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a class="dropdown-item dropdown-child" href="/content/pages/about">About</a></li>
-                  <li><a class="dropdown-item dropdown-child" href="/content/pages/blogs">Blogs</a></li>
-              </ul>
-            </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notes on the Negative binomial distribution</title>
+  <link rel="shortcut icon" href="https://www.shareicon.net/data/128x128/2016/03/03/728358_writing_512x512.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<!--Header-->
+<div class="row justify-content-center no-gutters">
+  <!--changing id attribute to calss attribute-->
+  <header class="header col">
+    <div class="container header-container">
+      <div class="row justify-content-between align-items-center no-gutters header-row">
+        <div class="header-titles">About</div>
+        <div class="header-titles">GitHub</div>
+        <div class="header-titles">LikedIn</div>
+        <img src="A logo.svg" class="A-logo">
+        <div class="header-titles push-1">Random</div>
+        <div class="header-titles">Twitter</div>
+        <div class="dropdown">
+          <div class="dots dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
           </div>
+          <!--li tag inside div container not allowed changing parent container as ul-->
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item dropdown-child">Hello</a></li>
+            <li><a class="dropdown-item dropdown-child">Hello</a></li>
+            <li><a class="dropdown-item dropdown-child">Hello</a></li>
+          </ul>
         </div>
-      </header>
+      </div>
+      <div class="row justify-content-center">
+        <div class="the-name">Arman Anwar</div>
+      </div>
     </div>
-    <!--Wrapper-->
-    <div class="row justify-content-center rm-zero">
-      <main class="content" role="main">
-        <div class="container container-wrapper col-8">
-          <div class="col">
-              <style type="text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-</style>
-
-              <div class="container-fluid main-container">
-
-<!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script><!-- code folding --><div class="fluid-row" id="header">
-
-
-
-<h1 class="title toc-ignore">Welcome to Arman’s blogs</h1>
-
+  </header>
 </div>
 
-
-<p>With over two decades of building innovative technological solutions that have solved some of the most seemingly intractable problems of the information age, Arman is in a league of his own. He holds two Masters degrees in Computer Science and Software Systems Engineering from George Mason University with an emphasis on Artificial Intelligence. He has pursued graduate work in Statistical Machine Learning at Stanford University,</p>
-<p>In addition to speaking dozens of computer languages and six human languages, in his “spare time” you are as likely to find him refurbishing an abandoned Cray Supercomputer, solving puzzles in computational mathematics, or riding one of his motorcycles.</p>
-<p>Arman has had a long-time passion for text analytics, machine learning, graph-based analytic methods, and artificial intelligence. His work has been instrumental to dramatically improving capabilities and performance for Fortune 500 companies, government agencies, international startups, and non-profits.</p>
-<p>At AppliedAi he and his teams are the glue that binds the best analytic solutions available anywhere on the planet to platforms that are both easy to understand and operate; and effective at facilitating profitable organizational improvements.</p>
-
-
-
-
-</div>
-              <script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-              <script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-	      </div>
-	      <div class="row justify-content-center">
-            <img src="/static/images/Arrow-Up-icon.png" class="arrow-up">
+<!--Wrapper-->
+<div class="row justify-content-center no-gutters">
+  <div class="container container-wrapper col-8">
+    <div class="col">
+      <div class="container tags-container">
+        <div class="row justify-content-between align-items-end">
+          <div class="arrow" style="margin-left: 12px;">
+            <a href="posts.html" class="back-to-posts">
+              <img src="Arrow-Up-icon.png" class="arrow-back">
+              <span class="arrow-text d-inline">Posts</span>
+            </a>
           </div>
+          <div class="tags">#tag #tag #tag</div>
         </div>
-      </main>
+      </div>
+      <h1 class="heading-wrapper text-center">Notes on the Negative binomial distribution</h1>
+      <p class="article first-paragraph text-left">
+        A generalization of a geometric distribution. Negative binomial distribution describes the number of successes
+        in a sequence of independent experiments performed until the
+        \(r−\)th failure. Formally, let
+        \(\xi_1,\xi_2,\ldots\) are results of experiments (that is all
+        \(\xi\) are independent and have Bernoulli distribution).
+        \(S_n=\xi_1+\ldots+\xi_n\) is the cumulative sum of
+        \(\xi&#39;\)s that represents the number of successes. The fact that there were \(r\) failures can be written as
+        \(S_n=n-r.\)
+        So, the negative binomial random variables is </p>
+      <div class="example-container container col">
+        <div class="example-wrapper row justify-content-center no-gutters">
+          <!--example math code-->
+          <p class="example">
+            \[
+            X=S_\tau, \tau=\min\{n\geq 1:S_n=n-r\}
+            \]
+          </p>
+        </div>
+      </div>
+      <p class="article text-left">
+        (here \(\tau\) is the number of the last experiment, when \(r\)th failure occured).Parameters:
+        \(r\) number of failures after which we stop performing experiments,
+        \(p\) – probability of a success in a single experiment.
+
+        <br>Values:
+        \(\{0,1,2,\ldots\}.\)
+        <br>
+        Probability mass function:
+      </p>
+      <div class="container example-container col">
+        <div class="example-wrapper  row justify-content-center no-gutters">
+          <p class="example">
+            \[
+            P(X=k)={k+r-1\choose k}p^{k}(1-p)^r, \ k\geq 0.
+            \]
+          </p>
+        </div>
+      </div>
+      <h1 class="text-center" style="padding: 7px; font-size: 3.5em;">Derivation</h1>
+      <p class="article text-left">
+        The event
+        \(X=k\) means that when the
+        \(r-\)th failure occurd there were exactly
+        \(k\) successes. In particular it means that the process stoped at
+        \((k+r)\)-th experiment:
+      </p>
+      <div class="container example-container col">
+        <div class="example-wrapper row justify-content-center no-gutters">
+          <p class="example">
+            \[
+            P(X=k)=P(\tau=k+r, S_{k+r}=k)=
+            \]
+          </p>
+        </div>
+      </div>
+      <p class="article text-left">The last experiment is a failure:</p>
+      <div class="container example-container col">
+        <div class="example-wrapper row justify-content-center no-gutters">
+          <p class="example">
+            \[
+            =P(\xi_{k+r}=0, S_{k+r-1}=k)=
+            \]
+          </p>
+        </div>
+      </div>
+      <p class="article text-left">By independence:</p>
+      <div class="container example-container col">
+        <div class="example-wrapper row justify-content-center no-gutters">
+          <p class="example">
+            \[=(1-p)P(S_{k+r-1}=k)=\]
+          </p>
+        </div>
+      </div>
+      <p class="article text-left">The sum has a binomial distribution:</p>
+      <div class="container example-container col">
+        <div class="example-wrapper row justify-content-center no-gutters">
+          <p class="example">
+            \[
+            =(1-p){k+r-1\choose k}p^{k}(1-p)^(r-1)={k+r-1\choose k}p^{k}(1-p)^r.
+            \]
+          </p>
+        </div>
+      </div>
+      <p class="article text-left">Moment generating function: </p>
+      <div class="container example-container col">
+        <div class="example-wrapper row justify-content-center no-gutters">
+          <p class="example">
+            \[
+            M(t)=\frac{(1-p)^r}{(1-pe^t)^r}, \ t&lt;
+            \ln\frac{1}{p}
+            \]
+          </p>
+        </div>
+      </div>
+      <h1 class="text-center" style="padding: 7px; font-size: 3.5em;">Proof</h1>
+      <p class="article text-left">
+        \(
+        M(t)=Ee^{tX}=
+        \)
+        <br>
+        Using probability mass function:
+      </p>
+      <div class="container example-container col">
+        <div class="example-wrapper row justify-content-center no-gutters">
+          <p class="example">\[
+            =\sum^\infty_{k=0} e^{tk}{k+r-1\choose k}p^{k}(1-p)^r=(1-p)^r\sum^\infty_{k=0} {k+r-1\choose k}(pe^t)^{k}=
+            \]</p>
+        </div>
+      </div>
+      <p class="article text-left">The sum is a Taylor expansion of
+        \(\frac{1}{(1-x)^r}\) around
+        \(0,\) evaluated at
+        \(x=pe^t\) (condition on
+        \(t\) ensures convergence)</p>
+      <div class="container example-container col">
+        <div class="example-wrapper row justify-content-center no-gutters">
+          <p class="example">
+            \[
+            =\frac{(1-p)^r}{(1-pe^t)^r}
+            \]
+          </p>
+        </div>
+      </div>
+      <p class="article text-left">Expectation:
+        \(EX=\frac{pr}{1-p}\)</p>
+
+      <p class="article text-left">Variance:
+        \(V(X)=\frac{pr}{(1-p)^2}\)</p>
+      <h1 class="text-center" style="padding: 7px; font-size: 3.5em;">Derivation</h1>
+      <p class="article text-left">Expectation is the first derivative
+        \(M&#39;(0).\) We have</p>
+      <div class="container example-container col">
+        <div class="example-wrapper row justify-content-center no-gutters">
+          <p class="example">
+            \[
+            M&#39;(t)=r\frac{p(1-p)^re^t}{(1-pe^t)^{r+1}}
+            \]
+            \[
+            EX=M&#39;(0)=\frac{pr}{1-p}
+            \]
+          </p>
+        </div>
+      </div>
+      <p class="article text-left">Second moment is the second derivative \(M&#39;&#39;(0).\). We have: </p>
+      <div class="container example-container col">
+        <div class="example-wrapper row justify-content-center no-gutters">
+          <p class="example">
+            \[M&#39;&#39;(t)=r\frac{p(1-p)^re^t}{(1-pe^t)^{r+1}}+r(r+1)\frac{p^2(1-p)^re^{2t}}{(1-pe^t)^{r+2}}\]
+            \[EX^2=\frac{pr}{1-p}+\frac{r(r+1)p^2}{(1-p)^2}\]
+          </p>
+        </div>
+      </div>
+      <p class="article text-left">Variance is</p>
+      <div class="container example-container col">
+        <div class="example-wrapper row justify-content-center no-gutters">
+          <p class="example">
+            \[V(X)=\frac{pr}{1-p}+\frac{rp^2}{(1-p)^2}=\frac{pr}{(1-p)^2}\]
+          </p>
+        </div>
+      </div>
     </div>
-    <footer id="footer">
-      <img src="/static/images/footer1.png">
-    </footer>
-    <script src="/static/js/jquery-3.js"></script>
-    <script src="/static/js/bootstrap.js"></script>
-    <script src="/static/js/scrollToView.js"></script>
-    <script src="/static/js/DotsMenuDropdown.js"></script>
-  </body>
+    <!--Lower container-->
+    <div class="container justify-content-center">
+      <div class="row align-items-center no-gutters">
+        <div class="arrow col-4 push-4 text-center"><img src="Arrow-Up-icon.png" class="arrow-up">
+        </div>
+        <div class="col-3 push-5 text-right icon-wrap">
+          <a href=""><img src="twitter.ico" class="ico ico-tw"></a>
+          <img src="facebook.svg" class="ico ico-fb">
+          <a href=""><img src="linkedin.ico" class="ico ico-in"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+    <img src="footer1.png">
+  </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous">
+</script>
+<script src="scrollToView.js"></script>
+<script src="DotsMenuDropdown.js"></script>
+
+<!--mathjax configuration-->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+
+</script>
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--mathjax configuration-->
+
 </html>
-

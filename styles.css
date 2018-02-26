@@ -1,0 +1,277 @@
+
+
+@font-face {
+font-family: 'Raleway regular';
+src: url('Fonts/Raleway-Regular.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Raleway semi-bold';
+src: url('Fonts/Raleway-SemiBold.ttf') format('truetype');
+}
+
+html, body {
+ background-color: #f2f0ed;
+ font-size: 81.25%;
+ margin: 0;
+ padding: 0;
+}
+.header-container {
+  padding: 60px 60px 0 0;
+}
+.header-titles {
+  font-family: 'Raleway regular';
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.3em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.header-titles:hover {
+  color: rgba(0, 0, 0, 0.3);
+  transition: 1s;
+}
+.A-logo {
+  pointer-events: none;
+  width: 36px;
+  height: 36px;
+}
+.the-name {
+  font-family: 'Raleway semi-bold';
+  font-size: 1.15em;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.25em;
+  font-weight: 800;
+  padding-top: 10px;
+  margin-left: 63px;
+  pointer-events: none;
+}
+.container-wrapper {
+  margin-top: 70px;
+  padding: 0 45px 45px 45px;
+  background-color: rgba(221, 218, 214, 0.5);
+  box-shadow: 4px 5.5px rgba(174, 156, 150, 0.25);
+
+}
+.heading-wrapper {
+  font-family: 'Raleway semi-bold';
+  font-size: 4.2em;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.4em;
+  pointer-events: none;
+  padding-top: 30px;
+}
+.article, .first-paragraph, .example {
+  font-family: 'Raleway regular';
+  font-size: 1.9em;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 1.6em;
+  margin-top: 10px;
+  pointer-events: none;
+}
+.article  {
+  padding: 0 20px 0 20px;
+}
+.first-paragraph {
+  margin-top: 30px;
+}
+.example-wrapper {
+  background-color: rgba(241, 241, 241, 0.6);
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.example {
+  margin: 0;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+#footer {
+ margin-top: 50px;
+ text-align: center;
+}
+#footer img {
+  max-width: 100%;
+}
+.arrow-up {
+ margin-top: 20px;
+ opacity: 0.6;
+ cursor: pointer;
+}
+.arrow-back {
+ width: 20px;
+ height: 20px;
+ transform: rotate(-90deg);
+ opacity: 0.6;
+ cursor: pointer;
+}
+.arrow:hover {
+  opacity: 0.48;
+  transition: 0.5s;
+}
+.arrow-text {
+ font-family: 'Raleway regular';
+ font-size: 1.55em;
+ color: rgba(0, 0, 0, 0.5);
+ letter-spacing: 0.15em;
+ cursor: pointer;
+ vertical-align: middle;
+}
+.arrow-text:active {
+  text-decoration: none;
+}
+.back-to-posts:hover {
+ text-decoration: none;
+}
+
+/*Dots menu*/
+
+.dot, .dot:before, .dot:after {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background-color: #3e27464d;
+  cursor: pointer;
+}
+
+.dot {
+  margin-top: -6px;
+  margin-left: 5px;
+}
+
+.dot:before, .dot:after {
+  content: "";
+}
+
+.dot:before {
+  right: 25px;
+  transition: right .6s ease-out;
+}
+
+.dot:after {
+  left: 25px;
+  transition: left .6s ease-out;
+}
+
+.dots:hover .dot:before {
+  right: -25px;
+  background-color: #3e27464d;
+}
+
+.dots:hover .dot:after {
+  left: -25px;
+  background-color: #3e27464d;
+}
+ /*Dots-Dropdown*/
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-menu {
+  width: 17vw;
+  background-color: rgba(231, 228, 225, 0.95);
+  border: 0.8px;
+  margin-top: 8px;
+}
+.dropdown-child {
+  padding: 25px;
+}
+.dropdown-menu > li > a {
+  text-align: center;
+  font-family: 'Raleway regular';
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.3em;
+  font-weight: 500;
+  cursor: pointer;
+}
+.dropdown-menu > li > a:hover {
+  background-color: transparent !important;
+}
+.dropdown-item {
+  cursor: pointer;
+}
+.ico {
+  width: 42px;
+  height: 42px;
+}
+.ico:hover {
+  transition: 0.5s;
+}
+.ico-fb {
+  width: 45px;
+  height: 45px;
+
+}
+.icon-wrap {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.ico-in {
+  margin-right: 10px;
+}
+.tags {
+  font-family: 'Raleway regular';
+  font-size: 1.4em;
+  text-transform: lowercase;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0.2em;
+  margin: 20px 15px 0 0;
+  pointer-events: none;
+}
+
+/*Posts*/
+
+.posts-list {
+ list-style-type: none;
+ padding: 45px;
+}
+.post-heading {
+ font-size: 2.5em;
+ color: rgba(0, 0, 0, 0.6);
+ letter-spacing: 0.1em;
+ line-height: 1.8em;
+ padding: 15px;
+ cursor: pointer;
+ padding-top: 15px;
+}
+.post-link:hover {
+ text-decoration: none;
+ color: rgba(0, 0, 0, 0.4);
+ transition: 1s;
+}
+.container-posts {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 60px solid #f2f0ed;
+  z-index: 100;
+  position: relative;
+}
+
+
+ @media (max-device-width: 800px) {
+  .dots {
+    margin-left: 30px;
+  }
+  .header-container{
+    padding: 30px;
+    padding-right: 60px;
+  }
+  .the-name {
+    margin-right: 25px;
+  }
+  .post-heading {
+    font-size: 2em;
+    letter-spacing: 0.08em;
+  }
+ }
+
