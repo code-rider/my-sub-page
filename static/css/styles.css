@@ -1,0 +1,256 @@
+@font-face {
+  font-family: 'Raleway regular';
+  src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Raleway semi-bold';
+  src: url('../fonts/Raleway-SemiBold.ttf') format('truetype');
+}
+
+html, body {
+  background-color: #f2f0ed;
+  font-size: 81.25%;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Raleway semi-bold';
+}
+a {
+  font-size: 2em;	
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+.header-container {
+  padding: 60px 52px;
+}
+.header-container:before,
+.header-container:after,
+.header-container .row:before,
+.header-container .row:after {
+  display: none;
+}
+.header-titles {
+  font-family: 'Raleway regular';
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.3em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.header-titles a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.A-logo {
+  pointer-events: none;
+  width: 36px;
+  height: 36px;
+}
+.container-wrapper {
+  padding: 65px;
+  margin-top: 70px;
+  background-color: rgba(221, 218, 214, 0.5);
+  box-shadow: 4px 5.5px rgba(174, 156, 150, 0.25);
+}
+body h1,
+.heading-wrapper,
+.col h1.title {
+  font-family: 'Raleway semi-bold';
+  font-size: 4.2em;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.4em;
+  pointer-events: none;
+}
+h1.title {
+  text-align: center;
+}
+body h2,
+.col h2,
+.blog-item-title {
+  padding: 10px 0;
+  font-size: 3.5em;
+}
+.blog-item-title {
+  padding-bottom: 0;
+}
+.blog-item-title a {
+  border-bottom: 1px solid #ccc;	
+  color: rgba(0, 0, 0, 0.85);
+}
+.blog-item-title a:hover {
+  border-bottom: 1px solid #000;	
+  text-decoration: none;
+}
+.blog-list-wrapper-pinned .blog-item-title {
+  background-image: url(../images/pin-icon.png);
+  background-repeat: no-repeat;
+  background-position: right 30px;
+  background-size: 18px;
+  padding-right: 25px;
+}
+.no-padding {
+  padding:0 !important;
+}
+.rm-zero {
+  margin-right: 0;
+}
+body p,
+.article, .first-paragraph, .example,
+.blog-item-date,
+.blog-item-teaser {
+  font-family: 'Raleway regular';
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 1.75em;
+  margin-top: 30px;
+  pointer-events: none;
+}
+.blog-item-date,
+.blog-item-teaser {
+  margin-top: auto;
+  padding-left: 15px;
+}
+.blog-list-item::before {
+  content: '\00BB';
+  float: left;
+  width: 15px;
+  font-size: 28px;
+  margin-top: 14px;
+}
+.main-container {
+  max-width: 100% !important;
+}
+.first-paragraph,
+.col p:first-child {
+  margin-top: 45px;
+}
+.example-wrapper {
+  background-color: rgba(241, 241, 241, 0.6);
+  padding: 25px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.example {
+  margin: 0;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+#footer {
+ margin-top: 50px;
+ text-align: center;
+}
+#footer img {
+  max-width: 100%;
+}
+.arrow-up {
+ margin-top: 20px;
+ opacity: 0.6;
+ cursor: pointer;
+}
+
+/*Dots menu*/
+
+.dot, .dot:before, .dot:after {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background-color: #3e27464d;
+  cursor: pointer;
+}
+
+.dot {
+  margin-top: -6px;
+  margin-left: 5px;
+}
+
+.dot:before, .dot:after {
+  content: "";
+}
+
+.dot:before {
+  right: 25px;
+  transition: right .6s ease-out;
+}
+
+.dot:after {
+  left: 25px;
+  transition: left .6s ease-out;
+}
+
+.dots:hover .dot:before {
+  right: -25px;
+  background-color: #3e27464d;
+}
+
+.dots:hover .dot:after {
+  left: -25px;
+  background-color: #3e27464d;
+}
+ /*Dots-Dropdown*/
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-menu {
+  width: 15vw;
+  background-color: rgba(231, 228, 225, 0.95);
+  border: 0.8px;
+  margin-top: 8px;
+}
+.dropdown-child {
+  padding: 25px !important;
+}
+.dropdown-menu > li > a {
+  text-align: center;
+  font-family: 'Raleway regular';
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.3em;
+  font-weight: 500;
+  cursor: pointer;
+}
+.dropdown-menu > li > a:hover {
+  background-color: transparent !important;
+}
+.dropdown-item {
+  cursor: pointer;
+}
+div#share {
+  float: left;
+  width: 100%;
+  padding: 0 15px;
+}
+div.share-header {
+  border-bottom: 2px solid #d8d8d8;
+  font-size: 16px;
+  height: 26px;
+  padding: 0;
+  margin: auto 15px;
+}
+div.share-header label.active {
+  border-bottom: 2px solid rgb(51, 122, 183);
+}
+
+.jssocials-share-link {
+  border-radius: 50%;
+  font-size: 1.5em;
+  line-height: inherit;
+}
+div.comment-warpper {
+  padding-left: 30px;
+}
+ @media (max-device-width: 800px) {
+  .dots {
+    margin-left: 30px;
+  }
+  .header-container{
+    padding: 30px;
+  }
+ }
